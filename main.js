@@ -23,10 +23,10 @@ let autoplay = 0;
 let index_no = 0;
 let Playing_song = false;
 
-//create a audio Element
+
 let track = document.createElement('audio');
 
-//All songs list
+
 let All_song = [
    {
      name: "Nayan-Dhvani Bhanushali, Jubin Nautiyal, and Lijo George",
@@ -94,10 +94,8 @@ img:"143793-jeetenge-hum-dhvani-bhanushali-mp3-song-300.jpg"
 ]
 
 
-// All functions
 
 
-// function load the track
 function load_track(index_no){
 	clearInterval(timer);
 	reset_slider();
@@ -116,7 +114,7 @@ function load_track(index_no){
 load_track(index_no);
 
 
-//mute sound function
+//mut
 function mute_sound(){
 	track.volume = 0;
 	volume.value = 0;
@@ -124,7 +122,6 @@ function mute_sound(){
 }
 
 
-// checking.. the song is playing or not
  function justplay(){
  	if(Playing_song==false){
  		playsong();
@@ -135,19 +132,19 @@ function mute_sound(){
  }
 
 
-// reset song slider
+
  function reset_slider(){
  	slider.value = 0;
  }
 
-// play song
+
 function playsong(){
   track.play();
   Playing_song = true;
   play.innerHTML = '<i class="fa fa-pause" aria-hidden="true"></i>';
 }
 
-//pause song
+
 function pausesong(){
 	track.pause();
 	Playing_song = false;
@@ -155,7 +152,7 @@ function pausesong(){
 }
 
 
-// next song
+
 function next_song(){
 	if(index_no < All_song.length - 1){
 		index_no += 1;
@@ -170,7 +167,7 @@ function next_song(){
 }
 
 
-// previous song
+
 function previous_song(){
 	if(index_no > 0){
 		index_no -= 1;
@@ -185,19 +182,19 @@ function previous_song(){
 }
 
 
-// change volume
+
 function volume_change(){
 	volume_show.innerHTML = recent_volume.value;
 	track.volume = recent_volume.value / 100;
 }
 
-// change slider position 
+ 
 function change_duration(){
 	slider_position = track.duration * (slider.value / 100);
 	track.currentTime = slider_position;
 }
 
-// autoplay function
+
 function autoplay_switch(){
 	if (autoplay==1){
        autoplay = 0;
@@ -212,14 +209,14 @@ function autoplay_switch(){
 function range_slider(){
 	let position = 0;
         
-        // update slider position
+       
 		if(!isNaN(track.duration)){
 		   position = track.currentTime * (100 / track.duration);
 		   slider.value =  position;
 	      }
 
        
-       // function will run when the song is over
+      
        if(track.ended){
        	 play.innerHTML = '<i class="fa fa-play" aria-hidden="true"></i>';
            if(autoplay==1){
