@@ -1,19 +1,22 @@
+*{
+  text-decoration:none;
+}
+
 body{
  background: linear-gradient(to right, #5D6D7E, #566573); 
  
- 
+ 	text-decoration:none;
 }
 .sologan{
   font-weight:bold;
   font-size:15px;
   color:white;
-  
+  	text-decoration:none;
  
 }
 .main{height: 200px;
-
-	width: auto;
-
+	text-decoration:none;
+	width: auto; 
   margin:0px auto;
   margin-left:auto;
   margin-right:auto;
@@ -32,12 +35,12 @@ img{
 	width: auto;
 	margin:7px;
 	border-radius:4px;
-	text-decoration:none;
+
 
   
 }
 .head{
-  
+  	text-decoration:none;
 
   	box-shadow: 1px 0px 20px 12px rgba(20,2,240,0.2);
   	border-radius:5px;
@@ -51,7 +54,7 @@ width: 7px;
 
 }
 .Artist1{
-  
+  	text-decoration:none;
     	font-weight:bold;
   font-size:25px;
   color:white;
@@ -72,5 +75,5 @@ width: 7px;
   border-radius:23px;
   height:150px;
   width:200px;
- 
+}
 }
